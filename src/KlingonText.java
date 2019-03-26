@@ -1,7 +1,7 @@
 public class KlingonText implements AlienCellPhone {
     @Override
     public void alienSendText(String fileName) {
-
+		//Do not need to implement
     }
 
     @Override
