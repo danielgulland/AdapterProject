@@ -11,12 +11,12 @@ public class Tester {
 		EarthText et = new EarthText();
 		EarthText et2 = new EarthText();
 		
-		try{
-			//Earth1 sends a message to Earth, but the file does not exist
-			et.sendMessage("Earth", "Earth.txt2");
-			//Earth sends a good message to Earth
-			et.sendMessage("Earth", "Earth.txt");
-			//Earth2 reads the message sent by Earth1
-			et2.readMessage("Earth.txt");
+//		try{
+//			//Earth1 sends a message to Earth, but the file does not exist
+//			et.sendMessage("Earth", "Earth.txt2");
+//			//Earth sends a good message to Earth
+//			et.sendMessage("Earth", "Earth.txt");
+//			//Earth2 reads the message sent by Earth1
+//			et2.readMessage("Earth.txt");
     }
 }
