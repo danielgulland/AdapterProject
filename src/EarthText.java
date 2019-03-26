@@ -17,12 +17,11 @@ public class EarthText implements EarthCellPhone {
 	@Override
 	public void sendMessage(String languageType, String fileName) {
 
-		if (validLanguages.contains(languageType) == true) {
-			if (languageType == "Earth")
+		if (validLanguages.contains(languageType)) {
 				System.out.println(languageType + " Message Sent");
-//			else
-			//Adapter pattern stuff?
-		} else
+
+		}
+		else
 			System.out.println("Not a supported language.");
 
 	}

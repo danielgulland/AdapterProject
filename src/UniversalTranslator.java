@@ -7,11 +7,12 @@ public class UniversalTranslator implements EarthCellPhone {
 
     @Override
     public void sendMessage(String languageType, String fileName) {
-
+        System.out.println(languageType + " Message Sent");
     }
 
     @Override
     public void readMessage(String fileName) {
-
+        System.out.println("Translating...");
+        alienTextMessage.alienReadText(fileName);
     }
 }

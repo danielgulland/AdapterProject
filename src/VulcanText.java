@@ -1,3 +1,6 @@
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 public class VulcanText implements AlienCellPhone {
     @Override
     public void alienSendText(String fileName) {
@@ -6,7 +9,18 @@ public class VulcanText implements AlienCellPhone {
 
     @Override
     public void alienReadText(String fileName) {
-
+        java.io.File f1 = new java.io.File(fileName);
+        try {
+            Scanner input = new Scanner(f1);
+            System.out.println("Vulcan: ");
+            while (input.hasNext()) {
+                String line = input.nextLine();
+                System.out.println(line);
+            }
+            input.close();
+        } catch (FileNotFoundException fnf) {
+            System.out.println("File: " + fileName + " does not exist");
+        }
     }
 
     @Override
@@ -14,9 +28,8 @@ public class VulcanText implements AlienCellPhone {
         return null;
     }
 
-	//Unique to Vulcan. Currently it reverses, which should be for Klingon. Needs to shuffle the letters in word
+
     private String shuffleString(String word) {
-		StringBuilder sb = new StringBuilder(word);
-		return (sb.reverse().toString());
+        return "agwrebgrbgberb";
     }
 }
