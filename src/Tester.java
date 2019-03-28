@@ -10,8 +10,7 @@ public class Tester {
 		
 		EarthText et = new EarthText();
 		EarthText et2 = new EarthText();
-		
-//		try {
+
 			//Earth1 sends a message to Earth, but the file does not exist
 			et.sendMessage("Earth", "Earth.txt2");
 //			//Earth sends a good message to Earth
@@ -26,8 +25,7 @@ public class Tester {
 			ut = new UniversalTranslator(new VulcanText());
 			e3 = ut;
 			e3.readMessage("Vulcan.txt");
-//		} catch(InvalidLanguageException i) {
-//			System.out.println("test");
-//		}
+			et.sendMessage("non-fed", "non-fed.txt");
     }
+
 }

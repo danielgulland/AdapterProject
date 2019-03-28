@@ -30,7 +30,13 @@ public class EarthText implements EarthCellPhone {
 			}
 		}
 		else
-			System.out.println("Not a supported language.");
+			try {
+				throw new InvalidLanguageException(languageType);
+			}
+			catch(InvalidLanguageException ile){
+				System.out.println(ile.getMessage());
+			}
+
 	}
 
 	//Simple Reader
