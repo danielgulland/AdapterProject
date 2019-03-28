@@ -51,6 +51,7 @@ public class EarthText implements EarthCellPhone {
 		try {
 			Scanner input = new Scanner(f1);
 			System.out.println(input.nextLine());
+			
 			input.close();
 		} catch (FileNotFoundException fnf) {
 			System.out.println("File: " + fileName + " does not exist");
