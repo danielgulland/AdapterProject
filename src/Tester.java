@@ -1,6 +1,6 @@
 /* John Bui & Daniel Gulland
    March 27, 2019
-   Purpose:
+   Purpose: 
    Inputs:
    Outputs;
  */
