@@ -1,3 +1,9 @@
+/* John Bui & Daniel Gulland
+   March 27, 2019
+   Purpose:
+   Inputs:
+   Outputs;
+ */
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.io.FileNotFoundException;

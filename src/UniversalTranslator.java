@@ -1,3 +1,9 @@
+/* John Bui & Daniel Gulland
+   March 27, 2019
+   Purpose:
+   Inputs:
+   Outputs;
+ */
 public class UniversalTranslator implements EarthCellPhone {
     AlienCellPhone alienTextMessage;
 
