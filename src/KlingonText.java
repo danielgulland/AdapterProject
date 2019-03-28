@@ -1,14 +1,19 @@
 /* John Bui & Daniel Gulland
    March 27, 2019
-   Purpose:
-   Inputs:
-   Outputs;
+   Purpose: read text and translate to Klingon
+   Inputs: input file name
+   Outputs: output file name
  */
-
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class KlingonText implements AlienCellPhone {
+
+    /**
+     * default constructor
+     */
+    public KlingonText() {}
+
     /**
      * N/A
      * @param fileName, name of the file
@@ -31,11 +36,6 @@ public class KlingonText implements AlienCellPhone {
         java.io.File f1 = new java.io.File(outputFile);
 
         // Read the translated text and output it.
-
-        // There needs to be a try catch block or change the signature to
-        //      alienReadText(String fileName) throws FileNotFoundException
-        // But, idk if this try catch makes sense cuz we're just writing to a file in translateText
-        //      so the file is always gonna be valid.
         try {
             Scanner input = new Scanner(f1);
             System.out.println("Klingon: " + input.nextLine());
@@ -70,5 +70,14 @@ public class KlingonText implements AlienCellPhone {
         }
 
         return outputFile;
+    }
+
+    /**
+     * string representation of a KlingonText object
+     *
+     * @return string representation of a KlingonText object
+     */
+    public String toString() {
+        return "This is a KlingonText object.\n";
     }
 }

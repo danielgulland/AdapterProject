@@ -1,15 +1,30 @@
 /* John Bui & Daniel Gulland
    March 27, 2019
-   Purpose:
-   Inputs:
-   Outputs;
+   Purpose: interface that provides generic methods: send, read, translate
+   Inputs: n/a
+   Outputs: n/a
  */
-import java.io.FileNotFoundException;
 
 public interface AlienCellPhone {
+
+    /**
+     * N/A
+     * @param fileName, name of the file
+     */
     public void alienSendText(String fileName);
+
+    /**
+     * translates the text into the alien language, then reads and outputs the translated text
+     *
+     * @param fileName, name of the input file
+     */
     public void alienReadText(String fileName);
-    //translateText returns the name of the output file
-    //that has the translated message
-    public String translateText(String fileName) throws FileNotFoundException;
+
+    /**
+     * reads a string from the input file, translates the string, then outputs the new string to the respective output file.
+     *
+     * @param fileName name of the input file
+     * @return String, output file that has the translated text.
+     */
+    public String translateText(String fileName);
 }

@@ -1,0 +1,15 @@
+Earth.txt2 doesn't exist
+Earth Message Sent
+This is Earth
+
+Klingon Message Sent
+Translating...
+Klingon: .txet nognilK ot htraE si sihT
+
+Vulcan Message Sent
+Translating...
+Vulcan: tHiS Is vUlCaN TeXt.
+
+Language: non-fed is not supported
+
+Process finished with exit code 0

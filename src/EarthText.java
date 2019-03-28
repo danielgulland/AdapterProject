@@ -1,8 +1,8 @@
 /* John Bui & Daniel Gulland
    March 27, 2019
-   Purpose:
-   Inputs:
-   Outputs;
+   Purpose: send texts and reads text
+   Inputs: language, filename
+   Outputs: n/a
  */
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -12,13 +12,15 @@ public class EarthText implements EarthCellPhone {
 
 	private ArrayList<String> validLanguages;
 
+	/**
+	 * initializes validLanguages and adds 3 languages.
+	 */
 	public EarthText() {
 		validLanguages = new ArrayList<>();
 		validLanguages.add("Earth");
 		validLanguages.add("Klingon");
 		validLanguages.add("Vulcan");
 	}
-
 
 	/**
 	 * Sends a message in the respective language.
@@ -33,8 +35,6 @@ public class EarthText implements EarthCellPhone {
 		if (validLanguages.contains(languageType)) {
 			try{
 				java.io.File f1 = new java.io.File(fileName);
-				// Seems we have to test f1 somehow, and an easy way is to use a Scanner object.
-//				 		If we don't have this, it'll say "FileNotFoundException is never thrown"
 				Scanner input = new Scanner(f1);
 				System.out.println(languageType + " Message Sent");
 			}
@@ -57,10 +57,18 @@ public class EarthText implements EarthCellPhone {
 		try {
 			Scanner input = new Scanner(f1);
 			System.out.println(input.nextLine());
-			
 			input.close();
 		} catch (FileNotFoundException fnf) {
 			System.out.println("File: " + fileName + " does not exist");
 		}
+	}
+
+	/**
+	 * string representation of an EarthText object
+	 *
+	 * @return string representation of an EarthText object
+	 */
+	public String toString() {
+		return "This is an EarthText object.\n";
 	}
 }

@@ -1,8 +1,8 @@
 /* John Bui & Daniel Gulland
    March 27, 2019
-   Purpose: 
-   Inputs:
-   Outputs;
+   Purpose: main, to test our project
+   Inputs: none
+   Outputs: none
  */
 public class Tester {
     public static void main(String[] args) {
