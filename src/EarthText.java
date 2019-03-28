@@ -14,8 +14,15 @@ public class EarthText implements EarthCellPhone {
 	}
 
 
+	/**
+	 * Sends a message in the respective language.
+	 *
+	 * @param languageType the language that it's going to be translated to
+	 * @param fileName the file to be read from
+	 * @throws InvalidLanguageException
+	 */
 	@Override
-	public void sendMessage(String languageType, String fileName) {
+	public void sendMessage(String languageType, String fileName) throws InvalidLanguageException {
 
 		if (validLanguages.contains(languageType)) {
 			try{
@@ -30,19 +37,20 @@ public class EarthText implements EarthCellPhone {
 			}
 		}
 		else
-			System.out.println("Not a supported language.");
+			throw new InvalidLanguageException(languageType);
 	}
 
-	//Simple Reader
+	/**
+	 * reads a message from a file
+	 *
+	 * @param fileName file to be read from
+	 */
 	@Override
 	public void readMessage(String fileName) {
 		java.io.File f1 = new java.io.File(fileName);
 		try {
 			Scanner input = new Scanner(f1);
-			while (input.hasNext()) {
-				String line = input.nextLine();
-				System.out.println(line);
-			}
+			System.out.println(input.nextLine());
 			input.close();
 		} catch (FileNotFoundException fnf) {
 			System.out.println("File: " + fileName + " does not exist");

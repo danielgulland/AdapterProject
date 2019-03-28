@@ -11,23 +11,34 @@ public class Tester {
 		EarthText et = new EarthText();
 		EarthText et2 = new EarthText();
 		
-//		try {
+		try {
 			//Earth1 sends a message to Earth, but the file does not exist
 			et.sendMessage("Earth", "Earth.txt2");
 //			//Earth sends a good message to Earth
 			et.sendMessage("Earth", "Earth.txt");
 //			//Earth2 reads the message sent by Earth1
 			et2.readMessage("Earth.txt");
+
+			System.out.println();
+
 			et.sendMessage("Klingon", "Klingon.txt");
 			UniversalTranslator ut = new UniversalTranslator(new KlingonText());
 			EarthCellPhone e3 = ut;
 			e3.readMessage("Klingon.txt");
+
+			System.out.println();
+
 			et.sendMessage("Vulcan", "Vulcan.txt");
 			ut = new UniversalTranslator(new VulcanText());
 			e3 = ut;
 			e3.readMessage("Vulcan.txt");
-//		} catch(InvalidLanguageException i) {
-//			System.out.println("test");
-//		}
+
+			System.out.println();
+
+			et.sendMessage("non-fed", "non-fed.txt");
+
+		} catch(InvalidLanguageException i) {
+			System.out.println(i.getMessage());
+		}
     }
 }

@@ -1,6 +1,16 @@
-public class InvalidLanguageException extends Throwable{
-    public InvalidLanguageException(String message)
-    {
-        System.out.println(message + " not supported");
+public class InvalidLanguageException extends Throwable {
+    private String invalidLanguage;
+
+    public InvalidLanguageException(String invalidLanguage) {
+        this.invalidLanguage = invalidLanguage;
+    }
+
+    /**
+     * message
+     * @return
+     */
+    public String getMessage() {
+
+        return invalidLanguage + " not supported";
     }
 }

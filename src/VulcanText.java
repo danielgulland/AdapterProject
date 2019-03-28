@@ -30,7 +30,7 @@ public class VulcanText implements AlienCellPhone {
         //      so the file is always gonna be valid.
         try {
             Scanner input = new Scanner(f1);
-            System.out.println(input.nextLine());
+            System.out.println("Vulcan: " + input.nextLine());
         } catch (FileNotFoundException fnf) {
             System.out.println("File: " + outputFile + " does not exist");
         }
