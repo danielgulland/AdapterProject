@@ -1,3 +1,9 @@
+/* John Bui & Daniel Gulland
+   March 27, 2019
+   Purpose:
+   Inputs:
+   Outputs;
+ */
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
@@ -14,12 +20,12 @@ public class VulcanText implements AlienCellPhone {
     /**
      * translates the text into the alien language, then reads and outputs the translated text
      *
-     * @param fileName, name of the input file
+     * @param fileName name of the input file
      */
     @Override
     public void alienReadText(String fileName) {
 
-        // Open the file the translated text is.
+        // Open the file that the translated text is in.
         String outputFile = translateText(fileName);
         java.io.File f1 = new java.io.File(outputFile);
 

@@ -1,16 +1,12 @@
-public class InvalidLanguageException extends Throwable {
-    private String invalidLanguage;
-
-    public InvalidLanguageException(String invalidLanguage) {
-        this.invalidLanguage = invalidLanguage;
-    }
-
-    /**
-     * message
-     * @return
-     */
-    public String getMessage() {
-
-        return invalidLanguage + " not supported";
+/* John Bui & Daniel Gulland
+   March 27, 2019
+   Purpose:
+   Inputs:
+   Outputs;
+ */
+public class InvalidLanguageException extends Exception {
+    public InvalidLanguageException(String message)
+    {
+        super("Language: " + message + " is not supported");
     }
 }

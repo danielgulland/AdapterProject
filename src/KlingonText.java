@@ -1,3 +1,10 @@
+/* John Bui & Daniel Gulland
+   March 27, 2019
+   Purpose:
+   Inputs:
+   Outputs;
+ */
+
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
