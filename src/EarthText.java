@@ -18,12 +18,19 @@ public class EarthText implements EarthCellPhone {
 	public void sendMessage(String languageType, String fileName) {
 
 		if (validLanguages.contains(languageType)) {
+			try{
+				java.io.File f1 = new java.io.File(fileName);
+				// Seems we have to test f1 somehow, and an easy way is to use a Scanner object.
+//				 		If we don't have this, it'll say "FileNotFoundException is never thrown"
+				Scanner input = new Scanner(f1);
 				System.out.println(languageType + " Message Sent");
-
+			}
+			catch (FileNotFoundException fnf) {
+				System.out.println(fileName + " doesn't exist");
+			}
 		}
 		else
 			System.out.println("Not a supported language.");
-
 	}
 
 	//Simple Reader
